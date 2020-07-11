@@ -1,6 +1,4 @@
-if __name__ == '__main__':
-    import dependencies
-    dependencies.install() # attempt to install any missing dependencies
+#!/usr/bin/env python3
 
 import asyncio
 import logging
@@ -58,7 +56,7 @@ async def on_command_error(ctx, exception):
     logger.error('Ignoring exception in command {}'.format(ctx.command))
     print('Ignoring exception in command {}'.format(ctx.command), file=sys.stderr)
     traceback.print_exception(type(exception), exception, exception.__traceback__, file=sys.stderr)
-    
+
 @bot.event
 async def on_member_join(member):
   # give a message on join
@@ -72,7 +70,10 @@ bot.add_cog(CommandColor(bot))
 bot.add_cog(CommandGradYear(bot))
 bot.add_cog(MiscFun(bot))
 
-if __name__ == '__main__':
+def main():
   print()
   print('connecting...')
   bot.run(secret.botToken)
+
+if __name__ == '__main__':
+  sys.exit(main())
