@@ -1,19 +1,13 @@
 #!/usr/bin/env python3
 
-import asyncio
 import logging
 import os
-import random
-import re
-import requests
 import sys
 import traceback
 
-import discord
 from discord.ext import commands
 
 import secret
-import self_updater
 from commands import CommandColor, CommandGradYear, MiscFun, StraightforwardHelp
 
 # set up logger

@@ -1,15 +1,13 @@
-import itertools
-
 from discord.ext import commands
 
 class StraightforwardHelp(commands.DefaultHelpCommand):
   """ A version of the default help command that does not show commands
       separated by categories.
   """
-  
+
   async def send_bot_help(self, mapping):
         # code adapted from the DefaultHelpCommand source.
-        
+
         ctx = self.context
         bot = ctx.bot
 
