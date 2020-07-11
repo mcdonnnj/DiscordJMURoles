@@ -129,6 +129,6 @@ dmypy.json
 .pyre/
 
 # bot token file
-secret.py
+src/lazybot/secret.py
 
 .vscode/
